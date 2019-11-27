@@ -1,0 +1,19 @@
+    <div class="w-100 text-white">
+          <form (ngSubmit)="onSubmit(f)" #f="ngForm" class="row">
+            <div class="col-4">
+                <label for="name"> Name</label>
+                <input type="text" name="name" ngModel required class="ml-4" [ngClass]="{'required': required}"><br>
+                <p *ngIf="required" class="red">Champ obligatoire</p>
+            </div>
+            <div class="col-4">
+                <label for="price"> Price</label>
+                <input type="number" name="price" ngModel required class="ml-4"[ngClass]="{'required': required}"><br>
+                <p *ngIf="required" class="red">Champ obligatoire</p>
+            </div>
+            
+              <div class="col-4">
+                  <button type="submit" class="btn btn-success">Add</button>
+              </div>
+            </form>
+          </div>  
+  
